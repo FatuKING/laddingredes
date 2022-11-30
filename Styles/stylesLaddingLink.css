@@ -1,6 +1,7 @@
 :root{
     height: 100%;
     width: 100%;
+    max-width: 100wh;
     box-sizing: border-box;
 
     --eggshell: hsla(48, 50%, 88%, 1);
@@ -20,32 +21,59 @@ html{
     border: 0%;
 }
 
+/*Video Fondo*/
+video{
+    position: fixed;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    z-index: -1;
+}
+
+
 /* Inicio Header */
 .header{
-    height: 10vh;
+    height: 4rem;
     width: 100vw;
 
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    place-items: center;
 
     background: var(--umber);
+    opacity: 60%;
+}
+
+.header .header_mail{
+    margin-left: 20px;
 }
 
 .header .tittle{
     text-align: center;
-    padding-left: 3.7em;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-left: 5em;
 }
 
-.header .btn{
+.header .btn_download{
     height: 30px;
     width: 200px;
-    border: 3px solid black;
+    border: 3px solid var(--olivine);
+    border-radius: 10px;
 
-    font-size: 17px;
-    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--olivine);
+    margin: 0 20px;
+}
+
+.header .btn_download a{
+    text-decoration: none;
+    color: black;
+
 }
 
 /* Inicio Main */
@@ -53,7 +81,7 @@ html{
     height: 80vh;
     width: 100vw;
 
-    background: var(--eggshell);
+    background: transparent;
 }
 
 .main .main_list{
@@ -75,7 +103,7 @@ html{
 
 .main .main_list .main_list_item:hover{
     background-color: var(--cafe-au-lait);
-    box-shadow: .5rem .5rem var(--olivine);
+    box-shadow: .5rem .5rem ;
 
     transition: 0.2s ease-out;
     border-bottom: 1px solid var(--umber);
@@ -111,10 +139,14 @@ img{
 
 /* Inicio Footer*/
 .footer{
-    height: 10vh;
+    height: 2rem;
     width: 100vw;
 
     background: var(--umber);
+    opacity: 60%;
+    position: absolute;
+
+
     display: flex;
     align-items: center;
     justify-content: center;
